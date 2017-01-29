@@ -25,33 +25,34 @@ public class Track {
         try {
 		buffer = new BufferedReader(new FileReader("/Users/Fenil/Desktop/CSCI 476/Labs/Lab 1/memorydump.dmp"));
 		while ((s = buffer.readLine()) != null) {
-		match = r.matcher(s);
-	     	if (match.find( )) {
-			i++;
+			match = r.matcher(s);
+	     		if (match.find( )) {
+				i++;
 					
-	     		String str = match.group(0);
-			str = str.replace('/','\0');
-	     		str = str.replace('^','\0');
+	     			String str = match.group(0);
+				str = str.replace('/','\0');
+	     			str = str.replace('^','\0');
 					
-			cnum = str.substring(0,16);
-	     		cname = str.substring(16,str.length()-8);
-			year = str.substring(str.length()-7,str.length()-5);
-	     		month = str.substring(str.length()-5,str.length()-3);
-		/*	pin = str.substring(str.length()-7,str.length()-3);*/
-	     		cvv = str.substring(str.length()-3,str.length());
+				cnum = str.substring(0,16);
+	     			cname = str.substring(16,str.length()-8);
+				year = str.substring(str.length()-7,str.length()-5);
+	     			month = str.substring(str.length()-5,str.length()-3);
+			/*	pin = str.substring(str.length()-7,str.length()-3);*/
+	     			cvv = str.substring(str.length()-3,str.length());
 			     		
-			System.out.println("<Information of the "+ i +"st credit card>");
-	     		System.out.println("Cardholder's Name: " +cname);
-			System.out.println("Card Number: " +cnum);
-  	         	System.out.println("Expiration Date: " +month+ "/20" +year);
-			System.out.println("Encrypted PIN: " +pin);
-  	         	System.out.println("CVV Number: " +cvv);
-		}
-	}   
+				System.out.println("<Information of the "+ i +"st credit card>");
+	     			System.out.println("Cardholder's Name: " +cname);
+				System.out.println("Card Number: " +cnum);
+  	         		System.out.println("Expiration Date: " +month+ "/20" +year);
+				System.out.println("Encrypted PIN: " +pin);
+  	         		System.out.println("CVV Number: " +cvv);
+			}
+		}   
         }
-		catch (IOException e) {
-			e.printStackTrace();
-		} 
+		
+	catch (IOException e) {
+		e.printStackTrace();
+	} 
 		System.out.println("There is "+ i +" piece of credit card information in the memory data!");
 	}
 
