@@ -44,7 +44,7 @@ public class Track {
 		     			month = str.substring(str.length()-5,str.length()-3);
 					
 				     		
-					System.out.println("<Information of the "+ i +"st credit card>");
+					System.out.println("<Information of the "+ i +" credit card>");
 		     			System.out.println("Cardholder's Name: " +cname);
 					System.out.println("Card Number: " +cnum);
 	  	         		System.out.println("Expiration Date: " +month+ "/20" +year);
