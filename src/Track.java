@@ -18,7 +18,7 @@ public class Track {
         Matcher matchOne = null;
         Matcher matchTwo = null;
 
-        String patternOne = "%B\\d{0,19}\\^[\\w\\s\\/]{2,26}\\^\\d{7}?";
+        String patternOne = "%B\\d{0,19}\\^[\\w/]{2,26}\\^\\d{7}?";
         String patternTwo = ";\\d{0,19}=\\d{14}?";
         
         Pattern trackOnePattern = Pattern.compile(patternOne);
