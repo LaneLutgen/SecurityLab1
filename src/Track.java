@@ -27,10 +27,22 @@ public class Track {
         int i = 0;
         
         try {
-		buffer = new BufferedReader(new FileReader("input/memorydump.dmp"));
-		while ((s = buffer.readLine()) != null) {
-			matchOne = trackOnePattern.matcher(s);
-			matchTwo = trackTwoPattern.matcher(s);
+        	
+        	String filePath = null;
+        	
+        	if(args.length > 0)
+        	{
+        		filePath = args[0];
+        	}
+        	else
+        	{
+        		filePath = "memorydump.dmp";
+        	}
+        	
+        	buffer = new BufferedReader(new FileReader(filePath));
+        	while ((s = buffer.readLine()) != null) {
+        		matchOne = trackOnePattern.matcher(s);
+        		matchTwo = trackTwoPattern.matcher(s);
 	     		if (matchOne.find( )) {
 					i++;
 						
