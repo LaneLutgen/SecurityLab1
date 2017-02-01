@@ -34,7 +34,7 @@ public class Track {
         	}
         	
         	else{
-        		filePath = "/Users/Fenil/Desktop/CSCI 476/Labs/Lab 1/memorydump.dmp";
+        		filePath = "memorydump.dmp";
         	}
         	
         	buffer = new BufferedReader(new FileReader(filePath));
